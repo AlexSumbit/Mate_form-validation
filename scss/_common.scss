@@ -5,6 +5,7 @@ html {
     height: 100%;
     overflow: auto;
     font-size: 14px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .req {
@@ -44,6 +45,7 @@ html {
 }
 
 .error-msg {
+    transition: 0.3s;
     position: absolute;
     top: 100%;
     left: 0;
@@ -97,13 +99,14 @@ html {
 }
 
 .btn {
-    background-color: #caccd1;
+    background-color: tomato;
     width: 100%;
-    height: 30px;
+    height: 40px;
     text-transform: uppercase;
     border: none;
     box-sizing: border-box;
     color: #fff;
+    outline: none;
 }
 
 
@@ -137,4 +140,58 @@ html {
 
 .invalid {
     border-color: red;
+}
+
+#overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &.open {
+        visibility: visible;
+        opacity: 0.7;
+    }
+}
+
+
+.modal {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    pointer-events: none;
+
+    &__window {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: 0.3s;
+        background-color: #f7f7f7;
+        border: 1px solid #a9aba0;
+        padding: 30px 15px;
+        pointer-events: all;
+        color: #8bc34a;
+        border-radius: 5px;
+    }
+
+    &.open {
+        visibility: visible;
+
+        .modal__window {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }

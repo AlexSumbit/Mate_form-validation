@@ -28,6 +28,33 @@ var Validation = (function() {
 })();
 
 
+var Popup = (function() {
+    let overlay, window;
+
+    document.addEventListener("DOMContentLoaded", function() {
+        overlay = document.getElementById("overlay");
+        window = document.getElementById("modal");
+
+        overlay.addEventListener("click", _close);
+    });
+
+    function _open() {
+        overlay.classList.add("open");
+        window.classList.add("open");
+    }
+
+    function _close() {
+        overlay.classList.remove("open");
+        window.classList.remove("open");
+    }
+
+    return {
+        open: _open,
+        close: _close
+    }
+})();
+
+
 var App = (function() {
     document.addEventListener("DOMContentLoaded", function(e) {
         flatpickr("input[type='date']", {
@@ -121,7 +148,7 @@ var App = (function() {
             });
 
             if(!errorsCount) {
-                
+                Popup.open();
             }
         });
     });
