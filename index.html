@@ -8,26 +8,29 @@
     </head>
     <body>
         <div class="container">
-            <form action="" class="form">
+            <form action="" id="form" class="form">
+                <template id="error-msg-tpl">
+                    <span class="error-msg"></span>
+                </template>
                 <div class="form-row">
                     <label class="form-group">
                         <span class="form-group__label">First name:<b class="req">*</b></span>
-                        <input class="form-group__input" type="text" required>
+                        <input class="form-group__input validate-text validate-empty" type="text">
                     </label>
                     <label class="form-group">
                         <span class="form-group__label">Last name:<b class="req">*</b></span>
-                        <input class="form-group__input" type="text" required>
+                        <input class="form-group__input required validate-text validate-empty" type="text">
                     </label>
                 </div>
                 <label class="form-group">
                     <span class="form-group__label">Birthday:<b class="req">*</b></span>
-                    <input class="form-group__input" type="date" required>
+                    <input class="form-group__input validate-empty" type="date">
                 </label>
                 <div class="form-group">
                     <span class="form-group__label">Sex:<b class="req">*</b></span>
                     <div class="form-row">
                         <label class="form-group radio">
-                            <input class="radio__input" value="0" type="radio" name="sex" required>
+                            <input class="radio__input" checked value="0" type="radio" name="sex" required>
                             <span class="radio__view" type="button"><i class="icon-male"></i></span>
                         </label>
                         <label class="form-group radio">
@@ -39,17 +42,17 @@
                 <div class="form-row">
                     <label class="form-group">
                         <span class="form-group__label">Email:<b class="req">*</b></span>
-                        <input class="form-group__input" type="email" required>
+                        <input class="form-group__input validate-email validate-empty" type="text">
                     </label>
                     <label class="form-group">
                         <span class="form-group__label">Password:<b class="req">*</b></span>
-                        <input class="form-group__input" type="password" required>
+                        <input class="form-group__input validate-empty" type="password">
                     </label>
                 </div>
                 <div class="form-row">
                     <label class="form-group">
                         <span class="form-group__label">Country:<b class="req">*</b></span>
-                        <select class="form-group__input" required>
+                        <select class="form-group__input validate-empty">
                             <option selected disabled></option>
                             <option value="1">Ukraine</option>
                             <option value="2">Russia</option>
@@ -57,12 +60,12 @@
                     </label>
                     <label class="form-group">
                         <span class="form-group__label">Address:<b class="req">*</b></span>
-                        <input class="form-group__input" type="text" required>
+                        <input class="form-group__input required validate-text validate-empty" type="text">
                     </label>
                 </div>
                 <label class="form-group">
                     <span class="form-group__label">Notest:</span>
-                    <textarea class="form-group__input form-group__input--text" cols="30" rows="10"></textarea>
+                    <textarea class="form-group__input form-group__input--text validate-text" cols="30" rows="10"></textarea>
                 </label>
                 <label class="form-group">
                     <button class="btn btn--submit">Submit</button>
