@@ -29,6 +29,12 @@
     @if $filename == date {
     $char: "\E001";
   }
+    @if $filename == famale {
+    $char: "\E002";
+  }
+    @if $filename == male {
+    $char: "\E003";
+  }
   
   @return $char;
   }
@@ -46,5 +52,11 @@
   
   .icon-date {
     @include icon(date);
+  }
+  .icon-famale {
+    @include icon(famale);
+  }
+  .icon-male {
+    @include icon(male);
   }
   

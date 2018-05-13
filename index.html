@@ -7,9 +7,73 @@
         <title>Form Validation</title>
     </head>
     <body>
-        
+        <div class="container">
+            <form action="" class="form">
+                <div class="form-row">
+                    <label class="form-group">
+                        <span class="form-group__label">First name:<b class="req">*</b></span>
+                        <input class="form-group__input" type="text" required>
+                    </label>
+                    <label class="form-group">
+                        <span class="form-group__label">Last name:<b class="req">*</b></span>
+                        <input class="form-group__input" type="text" required>
+                    </label>
+                </div>
+                <label class="form-group">
+                    <span class="form-group__label">Birthday:<b class="req">*</b></span>
+                    <input class="form-group__input" type="date" required>
+                </label>
+                <div class="form-group">
+                    <span class="form-group__label">Sex:<b class="req">*</b></span>
+                    <div class="form-row">
+                        <label class="form-group radio">
+                            <input class="radio__input" value="0" type="radio" name="sex" required>
+                            <span class="radio__view" type="button"><i class="icon-male"></i></span>
+                        </label>
+                        <label class="form-group radio">
+                            <input class="radio__input" value="1" type="radio" name="sex" required>
+                            <span class="radio__view" type="button"><i class="icon-famale"></i></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="form-group">
+                        <span class="form-group__label">Email:<b class="req">*</b></span>
+                        <input class="form-group__input" type="email" required>
+                    </label>
+                    <label class="form-group">
+                        <span class="form-group__label">Password:<b class="req">*</b></span>
+                        <input class="form-group__input" type="password" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label class="form-group">
+                        <span class="form-group__label">Country:<b class="req">*</b></span>
+                        <select class="form-group__input" required>
+                            <option selected disabled></option>
+                            <option value="1">Ukraine</option>
+                            <option value="2">Russia</option>
+                        </select>
+                    </label>
+                    <label class="form-group">
+                        <span class="form-group__label">Address:<b class="req">*</b></span>
+                        <input class="form-group__input" type="text" required>
+                    </label>
+                </div>
+                <label class="form-group">
+                    <span class="form-group__label">Notest:</span>
+                    <textarea class="form-group__input form-group__input--text" cols="30" rows="10"></textarea>
+                </label>
+                <label class="form-group">
+                    <button class="btn btn--submit">Submit</button>
+                </label>
+            </form>
+        </div>
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

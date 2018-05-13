@@ -1,0 +1,120 @@
+body,
+html {
+    background-color: #f7f7f7;
+    min-height: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+.req {
+    color: #fd1d1d;
+    margin-left: 5px;
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.form {
+    padding: 20px 15px;
+    border: 1px solid #e0e0f0;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+
+    .form-group {
+        &:not(:last-child) {
+            margin-right: 5px
+        }
+    }
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &__label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 10px;
+        color: #6d6e70;
+    }
+
+    &__input {
+        width: 100%;
+        height: 30px;
+        border: none;
+        border-radius: 0;
+        border: 1px solid #caccd1;
+        outline: none;
+        padding: 0 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:focus {
+            border-color: #0091cd;
+        }
+
+        &--text {
+            padding: 5px 10px;
+            min-height: 80px;
+            max-width: 100%;
+            min-width: 100%;
+
+        }
+    }
+}
+
+.btn {
+    background-color: #caccd1;
+    width: 100%;
+    height: 30px;
+    text-transform: uppercase;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+.radio {
+
+    &__view {
+        background-color: transparent;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        border: none;
+        border-radius: 0;
+        border: 1px solid #caccd1;
+        outline: none;
+    }
+
+    &__input {
+        position: absolute;
+        top: -999999px;
+
+        &:checked + .radio__view {
+            color: #0091cd;
+            border-color: #0091cd;
+        }
+    }
+}
